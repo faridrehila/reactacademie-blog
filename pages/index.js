@@ -7,10 +7,8 @@ import Layout from "../components/Layout/layout";
 import { getPostsData } from "../lib/posts";
 
 export default function Home({ allPostsData }) {
-  console.log("allPostsData", allPostsData);
-
   return (
-    <Layout>
+    <Layout home>
       <div className={styles.container}>
         <Head>
           <title>Blog React Académie</title>

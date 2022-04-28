@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "./layout.module.css";
 
-export default function Layout({ children }) {
+export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -20,11 +20,13 @@ export default function Layout({ children }) {
 
       <main>{children}</main>
 
-      <div className={styles.back}>
-        <Link href="/">
-          <a>Retour à l{`'`}acceuil</a>
-        </Link>
-      </div>
+      {!home && (
+        <div className={styles.back}>
+          <Link href="/">
+            <a>Retour à l{`'`}acceuil</a>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
