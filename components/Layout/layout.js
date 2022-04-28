@@ -21,7 +21,7 @@ export default function Layout({ children }) {
       <main>{children}</main>
 
       <div className={styles.back}>
-        <Link href="/">Retour à l'acceuil</Link>
+        <Link href="/">Retour à l{`'`}acceuil</Link>
       </div>
     </div>
   );
